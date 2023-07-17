@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -86,12 +86,12 @@ WSGI_APPLICATION = "HostoAPI.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': os.getenv('postgresql://postgres:v7D2AsDlXUsEUKyUWUOL@containers-us-west-92.railway.app:7344/railway'),
-        'NAME': os.getenv('railway'),
-        'USER': os.getenv('postgres'),
-        'PASSWORD': os.getenv('v7D2AsDlXUsEUKyUWUOL'),
-        'HOST': os.getenv('containers-us-west-92.railway.app'),
-        'PORT': os.getenv('7344'),
+        'URL': 'postgresql://postgres:v7D2AsDlXUsEUKyUWUOL@containers-us-west-92.railway.app:7344/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'v7D2AsDlXUsEUKyUWUOL',
+        'HOST': 'containers-us-west-92.railway.app',
+        'PORT': '7344',
     }
 }
 
